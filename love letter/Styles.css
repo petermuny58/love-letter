@@ -1,0 +1,195 @@
+/* styles.css — shared styles for all pages */
+:root{
+  --bg1: #2b0a1f; /* deep */
+  --bg2: #6f2746; /* rose */
+  --accent: #f6b9a3; /* warm */
+  --gold: #f0c987;
+  --glass: rgba(255,255,255,0.06);
+  --text: #f8f4f2;
+  --muted: #d6c9c6;
+  --radius: 14px;
+  --max-width: 1000px;
+  --ease: cubic-bezier(.2,.9,.26,1);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding:36px 18px;
+}
+
+/* container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  backdrop-filter: blur(6px);
+  padding:28px;
+  border-radius:18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 8px 30px rgba(2,2,12,0.6);
+}
+
+/* header/nav */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:18px;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.logo{
+  width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--gold));
+  display:flex;align-items:center;justify-content:center;font-weight:700;color:#2b0a1f;
+  box-shadow:0 4px 12px rgba(0,0,0,0.25)
+}
+.brand h1{font-family:"Playfair Display",serif;margin:0;font-size:20px;letter-spacing:0.6px}
+.nav a{
+  color:var(--muted);text-decoration:none;margin-left:12px;padding:8px 12px;border-radius:10px;transition:all .22s var(--ease);
+}
+.nav a:hover{background:var(--glass);color:var(--text);transform:translateY(-2px)}
+
+/* hero */
+.hero{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:24px;
+  align-items:center;
+}
+.hero-left{padding:8px}
+.lead{
+  font-family:"Playfair Display",serif;
+  font-size:32px;margin:0 0 10px 0;color:var(--text);
+  letter-spacing:0.2px;
+}
+.subtitle{color:var(--muted);margin:0 0 20px 0}
+
+/* typewriter quote */
+.typewriter{
+  font-size:18px; color:var(--gold); font-weight:600; min-height:48px;
+}
+
+/* floating card */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:16px;padding:18px;box-shadow: 0 10px 40px rgba(0,0,0,0.45);
+  transform-origin:center;
+  animation: float 6s ease-in-out infinite;
+}
+@keyframes float{
+  0%{transform: translateY(0px)}
+  50%{transform: translateY(-10px)}
+  100%{transform: translateY(0px)}
+}
+
+/* small components */
+.btn{
+  display:inline-block;padding:10px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent),var(--gold));
+  color:#2b0a1f;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(0,0,0,0.25);
+}
+.meta{color:var(--muted);font-size:14px}
+
+/* story layout */
+.timeline{display:flex;flex-direction:column;gap:16px;margin-top:12px}
+.event{display:flex;gap:14px;align-items:flex-start}
+.event .dot{width:12px;height:12px;border-radius:50%;background:var(--gold);margin-top:6px;flex:0 0 12px}
+.event .body{background:rgba(255,255,255,0.02);padding:12px;border-radius:12px;flex:1}
+
+/* poems */
+.poem-card{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));}
+.poem{font-family:"Playfair Display",serif;font-size:20px;color:var(--text);margin:0 0 10px 0}
+.quote{color:var(--muted);font-size:14px;margin:0}
+
+/* gallery grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+.thumb{width:100%;height:160px;border-radius:12px;object-fit:cover;display:block;box-shadow:0 6px 18px rgba(0,0,0,0.4);cursor:pointer;}
+
+/* small screens */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .header{flex-direction:column;align-items:flex-start;gap:12px}
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap');
+
+body {
+     margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding:36px 18px;
+}
+
+.poem-section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: rgba(255, 201, 217, 0.28);
+    border-radius: 18px;
+    backdrop-filter: blur(4px);
+    border-left: 4px solid #e07a9e;
+    border-right: 4px solid #ffdfb9;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s forwards ease-out;
+    animation-delay: var(--d);
+    line-height: 1.75;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.4s ease;
+}
+
+.poem-section:hover {
+    box-shadow: 0 0 18px rgba(224, 122, 158, 0.45);
+    transform: scale(1.02);
+}
+
+/* Soft fade */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heartbeat rhythm */
+.poem-section {
+    animation: fadeIn 1.5s forwards ease-out, heartbeat 5s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.012); }
+}
+/* Floating petals */
+.petal {
+    position: fixed;
+    top: -10px;
+    width: 12px;
+    height: 12px;
+    background: #ffc9d9;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) translateX(20px);
+        opacity:0;
+}
+}

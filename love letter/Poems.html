@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Poems</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+
+  <div class="container">
+    <header class="header">
+      <div class="brand"><div class="logo">❤</div><h1>For Her</h1></div>
+      <nav class="nav"><a href="index.html">Home</a><a href="story.html">Story</a><a href="gallery.html">Gallery</a></nav>
+    </header>
+
+    <main>
+      <h2 class="lead">Poems & Quotes</h2>
+      <p class="subtitle">Chipego... i honestly really like you</p>
+
+      <div style="display:flex;gap:12px;align-items:center;margin-bottom:12px">
+        <button id="poem-prev" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Prev</button>
+        <button id="poem-next" class="btn" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">Next</button>
+      </div>
+
+      <!-- poem cards -->
+      <div class="poem-card">
+        <div class="poem-card poem-card" style="display:block">
+          <p class="poem">I keep small maps of the places your laughter lives —<br> pockets of sunlight I visit when days are grey.</p>
+          <p class="quote">— A line for afternoons</p>
+        </div>
+
+        <div class="poem-card" style="display:none">
+          <p class="poem">When you tilt your head, the world learns a kinder angle —<br> I follow the new geometry of your smile.</p>
+          <p class="quote">— For the nights I remember clearly</p>
+        </div>
+
+        <div class="poem-card" style="display:none">
+          <p class="poem">Not brave words, just steady ones: I will keep my small promises,<br> put them in pockets, give them to days when you need them.</p>
+          <p class="quote">— A promise folded like a leaf</p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+   <div class="poem-section">
+    I was speaking to Vanessa,
+    half-awake, half-alive,
+    when she opened a door
+    I didn’t know existed—
+    and you walked in
+    with the calm of a girl
+    who has survived storms.
+</div>
+
+<div class="poem-section">
+    She warned me about you.
+    Said your heart was a country
+    recently wounded by war.
+    Said you don’t hand out your number
+    because your trust
+    is stitched with trembling fingers.
+</div>
+
+<div class="poem-section">
+    But what she didn’t understand
+    is that some women
+    are not asked for —
+    they are summoned
+    by a man’s fate.
+</div>
+
+<div class="poem-section">
+    So I insisted.
+    Not because I wanted you—
+    wanting is too small a word—
+    but because something inside me
+    recognized you
+    the way deserts recognize rain.
+</div>
+
+<div class="poem-section">
+    She added you to the call
+    and the world stopped.
+    Three seconds of silence
+    louder than a lifetime.
+    You spoke, softly—
+    and my name learned
+    how to kneel.
+</div>
+
+<div class="poem-section">
+    When you finally gave me your line,
+    I wrote to you
+    as if writing to my own pulse.
+    And you replied
+    as if you had been waiting
+    for someone reckless enough
+    to believe in you again.
+</div>
+<div class="poem-section">
+    For seven nights
+    your messages touched me
+    through the glass of a screen,
+    and I swear
+    I have never been held
+    more gently.
+</div>
+
+<div class="poem-section">
+    And when we met—
+    when my eyes saw you
+    unfiltered,
+    untranslated,
+    untouched by distance—
+    I understood
+    why some loves
+    are written before birth
+    and revealed
+    only when two hearts
+    are ready to surrender.
+</div>
+  
+    <script>
+// Staggered paragraph rhythm
+document.querySelectorAll('.poem-section').forEach((section, i) => {
+    section.style.setProperty('--d', ${i * 0.6}s);
+});
+
+// Floating petals
+for (let i = 0; i < 18; i++) {
+    let petal = document.createElement("div");
+    petal.classList.add("petal");
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDelay = Math.random() * 8 + "s";
+    petal.style.opacity = (Math.random() * 0.5) + 0.3;
+    document.body.appendChild(petal);
+}
+</script>
+
+
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
